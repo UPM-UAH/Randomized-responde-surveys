@@ -4,15 +4,15 @@ Ideas...
 
 ## Artículo de Blair et al. (2015):
 
-Mirrored question design: con una probabilidad p (parámetro de diseño) respondes la pregunta, y con 1-p respondes la contraria. La probabilidad deseada P, en función de la probabilidad observada Q, puede expresarse como (Q+p-1)/(2*p-1), siendo p un parámetro de diseño.
+Mirrored question design: con una probabilidad p (parámetro de diseño) respondes la pregunta, y con 1-p respondes la contraria. La probabilidad deseada P, en función de la probabilidad observada Q, puede expresarse como (Q+p-1)/(2·p-1), siendo p un parámetro de diseño.
 
 Forced response design: con probabilidad p0 dices "no", con p1 dices "sí", con 1-p0-p1 dices la verdad. P = (Q-p1)/(1-p0-p1), siendo p0 y p1 parámetros de diseño. Parece que este diseño es el más usado.
 
 Disguised response design (Kuk): la relación entre P y Q es como en mirrored question design. El procedimiento de encuesta es diferente, para que "psicológicamente" cueste menos responder. En función de la respuesta real "sí" o "no", el encuestado saca una carta de una baraja o de otra. En esas barajas, las proporciones de cartas rojas y negras son diferentes (eso es lo que permite obtener una estimación de P). El encuestado dice si la carta es roja o negra.
 
-Unrelated question design: P = (Q-(1-p1*)p2)/p1, siendo p1 y p2 parámetros de diseño, que se suponen conocidos (probabilidad de que les toque la pregunta que nos interesa, y probabilidad de que la otra pregunta tenga respuesta positiva, respectivamente)
+Unrelated question design: P = (Q-(1-p1)·p2)/p1, siendo p1 y p2 parámetros de diseño, que se suponen conocidos (probabilidad de que les toque la pregunta que nos interesa, y probabilidad de que la otra pregunta tenga respuesta positiva, respectivamente)
 
-En todos los casos, P es una función afín de Q: P = a*Q+b, siendo a y b parámetros de diseño, con valores conocidos.
+En todos los casos, P es una función afín de Q: P = a·Q+b, siendo a y b parámetros de diseño, con valores conocidos.
 
 
 ## Hussain et al. (2016):
@@ -33,23 +33,23 @@ No parece que haya artículos o resultados conocidos para garantizar una calidad
 
 # IBS modificado con número de entradas cuadrático
 
-Una forma de garantizar una calidad relativa para P = a+b*Q a partir de observaciones de una secuencia X de variables i.i.d. de Bernoulli con parámetro Q es la siguiente.
+Una forma de garantizar una calidad relativa para P = a+b·Q a partir de observaciones de una secuencia X de variables i.i.d. de Bernoulli con parámetro Q es la siguiente.
 
-El caso más interesante es Q = (1+P)/2; P = 2*Q-1. Esto corresponde por ejemplo a forced response design con p0=0, p1 = 1/2. Además puede suponerse que P es muy pequeña, ya que es la situación de mayor interés. Entonces Q será próxima a 1/2. Suponemos también que la calidad relativa se define en términos de confianza: probabilidad de que el valor estimado esté dentro de un intervalo *relativo* en torno al valor real.
+El caso más interesante es Q = (1+P)/2; P = 2·Q-1. Esto corresponde por ejemplo a forced response design con p0=0, p1 = 1/2. Además puede suponerse que P es muy pequeña, ya que es la situación de mayor interés. Entonces Q será próxima a 1/2. Suponemos también que la calidad relativa se define en términos de confianza: probabilidad de que el valor estimado esté dentro de un intervalo *relativo* en torno al valor real.
 
 Aplicamos a la secuencia X la transformación (fábrica de Benoulli) y = (x-1/2)^2. Como la secuencia X tiene parámetro Q=(1+P)/2, la secuencia transformada Y tendrá parámetro P^2/4. Producir cada muestra de Y consume del orden de 1 muestra de X en media, para P pequeña, como se explica a continuación.
 
 Esa transformación se hace de la siguiente manera, usando variables aleatoria auxiliares distribuciones fijas:
 
- - (Q-1/2)^2 se puede expresar como (1-4*Q*(1-Q))/4 = (1-4*sqrt(Q)^2*sqrt(1-Q)^2)/4.
+ - (Q-1/2)^2 se puede expresar como (1-4·Q·(1-Q))/4 = (1-4·sqrt(Q)^2·sqrt(1-Q)^2)/4.
  - El primer factor, 1/4, se genera sin consumir muestras, simplemente usando una variable auxiliar de Bernoulli con parámetro 1/4. Si esa variable es 0 hemos terminado, y el resultados es 0. Si esa variable es 1 continuamos.
  - La operación 1-(...) es simplemente invertir el valor (cambiar cero por uno).
- - El término 4*sqrt(Q)^2*sqrt(1-Q)^2 es 2/3 * 6*sqrt(Q)^2*sqrt(1-Q)^2, y 6*sqrt(Q)^2*sqrt(1-Q)^2 es la proabilidad de que en 4 realizaciones de sqrt(Q) haya 2 ceros y 2 unos (hay 6 posibles casos: 0011, 0101, 0110, 1001, 1010, 1100).
+ - El término 4·sqrt(Q)^2·sqrt(1-Q)^2 es 2/3 · 6·sqrt(Q)^2·sqrt(1-Q)^2, y 6·sqrt(Q)^2·sqrt(1-Q)^2 es la proabilidad de que en 4 realizaciones de sqrt(Q) haya 2 ceros y 2 unos (hay 6 posibles casos: 0011, 0101, 0110, 1001, 1010, 1100).
  - Generar 2/3 es, de nuevo, inmediato
- - Generar 6*sqrt(Q)^2*sqrt(1-Q)^2 requiere 4 muestras (como mucho) de sqrt(Q).
+ - Generar 6·sqrt(Q)^2·sqrt(1-Q)^2 requiere 4 muestras (como mucho) de sqrt(Q).
  - sqrt(Q) se genera a partir de muestras de X, con un consumo medio de 1/sqrt(Q) muestras de entrada para cada salida (Mendo, 2019).
 
-En total, el número de muestras de X requeridas para obtener una muestra de Y es 1/4 * 2/3 * 4/sqrt(Q) = 2/3/sqrt(Q), que es aproximadamente 1 para Q próxima a 1/2. Es decir, para producir cada muestra de Y se consume del orden de 1 muestra de X.
+En total, el número de muestras de X requeridas para obtener una muestra de Y es 1/4 · 2/3 · 4/sqrt(Q) = 2/3/sqrt(Q), que es aproximadamente 1 para Q próxima a 1/2. Es decir, para producir cada muestra de Y se consume del orden de 1 muestra de X.
 
 Después aplicamos IBS a la secuencia Y, que tiene parámetro P^2/4. Ello permite estimar P^2/4 con confianza garantizada, consumiendo del orden de 1/P^2 muestras de Y, o de X, en media. La estimación de P^2/4 con confianza garantizada puede traducirse en una estiamción de P con confianza garantizada (transformando el intervalo relativo). 
 
