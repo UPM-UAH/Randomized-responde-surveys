@@ -1,6 +1,6 @@
 # Randomized response surveys
 
-Ideas...
+Algunas ideas.
 
 ## Artículo de Blair et al. (2015):
 
@@ -31,7 +31,7 @@ IBS: permite estimar una probabilidad garantizando una calidad *relativa* (RMSE,
 No parece que haya artículos o resultados conocidos para garantizar una calidad relativa para P a partir de observaciones de Q.
 
 
-# IBS modificado con número de entradas cuadrático
+## IBS modificado con número de entradas cuadrático
 
 Una forma de garantizar una calidad relativa para P = a+b·Q a partir de observaciones de una secuencia X de variables i.i.d. de Bernoulli con parámetro Q es la siguiente.
 
