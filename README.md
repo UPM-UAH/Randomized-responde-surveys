@@ -4,7 +4,7 @@ Algunas ideas.
 
 ## Artículo de Blair et al. (2015):
 
-Mirrored question design: con una probabilidad p (parámetro de diseño) respondes la pregunta, y con 1-p respondes la contraria. La probabilidad deseada P, en función de la probabilidad observada Q, puede expresarse como (Q+p-1)/(2·p-1), siendo p un parámetro de diseño.
+Mirrored question design: con una probabilidad p (parámetro de diseño) respondes la pregunta, y con 1-p respondes la contraria. La probabilidad deseada P, en función de la probabilidad observada Q, puede expresarse como P = (Q+p-1)/(2·p-1), siendo p un parámetro de diseño.
 
 Forced response design: con probabilidad p0 dices "no", con p1 dices "sí", con 1-p0-p1 dices la verdad. P = (Q-p1)/(1-p0-p1), siendo p0 y p1 parámetros de diseño. Parece que este diseño es el más usado.
 
