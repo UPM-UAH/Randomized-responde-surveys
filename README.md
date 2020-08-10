@@ -39,7 +39,7 @@ El caso más interesante es Q = (1+P)/2; P = 2·Q-1. Esto corresponde por ejempl
 
 Aplicamos a la secuencia X la transformación (fábrica de Benoulli) y = (x-1/2)^2. Como la secuencia X tiene parámetro Q=(1+P)/2, la secuencia transformada Y tendrá parámetro P^2/4. Producir cada muestra de Y consume del orden de 1 muestra de X en media, para P pequeña, como se explica a continuación.
 
-Esa transformación se hace de la siguiente manera, usando variables aleatoria auxiliares distribuciones fijas:
+Esa transformación se hace de la siguiente manera, usando variables aleatorias auxiliares con distribuciones fijas:
 
  - (Q-1/2)^2 se puede expresar como (1-4·Q·(1-Q))/4 = (1-4·sqrt(Q)^2·sqrt(1-Q)^2)/4.
  - El primer factor, 1/4, se genera sin consumir muestras, simplemente usando una variable auxiliar de Bernoulli con parámetro 1/4. Si esa variable es 0 hemos terminado, y el resultados es 0. Si esa variable es 1 continuamos.
@@ -54,4 +54,5 @@ En total, el número de muestras de X requeridas para obtener una muestra de Y e
 Después aplicamos IBS a la secuencia Y, que tiene parámetro P^2/4. Ello permite estimar P^2/4 con confianza garantizada, consumiendo del orden de 1/P^2 muestras de Y, o de X, en media. La estimación de P^2/4 con confianza garantizada puede traducirse en una estiamción de P con confianza garantizada (transformando el intervalo relativo). 
 
 Parece excesivo. ¿Se puede hacer consumiendo del orden de 1/P muestras, en vez e 1/P^2? (Haciendo la pregunta directa, sin RRS, sí sería del orden de 1/P).
+
 
