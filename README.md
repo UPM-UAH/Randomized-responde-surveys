@@ -62,7 +62,7 @@ Consideremos la transformación y = (x-1/2)^2, seguida de z = y^(1/2). La transf
 
 1. z = f(x) no puede simularse de forma "fast", es decir, con cola exponencial (teorema 2).
 
- No hay contradicción con la proposición 14 (ii), que dice que la composición de funciones "fast" es "fast". z es la composición de y = (x-1/2)^2, z = y^(1/2). La primera se puede simular de forma "fast", pero la segunda no, porque para x ≈ 1/2 se tiene y ≈ 0, y ahí z = y^(1/2) no es analítica, por tanto no es "fast".
+   No hay contradicción con la proposición 14 (ii), que dice que la composición de funciones "fast" es "fast". z es la composición de y = (x-1/2)^2, z = y^(1/2). La primera se puede simular de forma "fast", pero la segunda no, porque para x ≈ 1/2 se tiene y ≈ 0, y ahí z = y^(1/2) no es analítica, por tanto no es "fast".
 
 2. Sea N el número de observaciones necesarias. Por construcción, f puede simularse con E[N] finito. Por tanto (proposición 22 con k=1) el momento de primer orden no puede tener cola uniforme. Es decir, E[N * 1(N>n)] tiende a 0 cuando n tiende a infinito, pero no uniformemente en p (en un conjunto abierto).
 
