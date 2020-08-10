@@ -56,10 +56,10 @@ Después aplicamos IBS a la secuencia Y, que tiene parámetro P^2/4. Ello permit
 Parece excesivo. ¿Se puede hacer consumiendo del orden de 1/P muestras, en vez e 1/P^2? (Haciendo la pregunta directa, sin RRS, sí sería del orden de 1/P).
 
 
-## Propiedades de |x-1/2|: comprobar
+## Propiedades de |x-1/2|
 
-Consideremos la transformación y = (x-1/2)^2, seguida de z = y^(1/2). La transformación compuesta es z = f(x) = |x-1/2|. Esta función es C0 pero no C1. Por tanto, según Yacu-Peres (tabla 1, teorema 2, proposición 22 con k=1, proposición 14 (ii)):
+Consideremos la transformación y = (x-1/2)^2, seguida de z = y^(1/2). La transformación compuesta es z = f(x) = |x-1/2|. Esta función es C0 pero no C1. Por tanto, según Yacu-Peres (tabla 1, teorema 2, proposición 22 con k=1):
 
 1. z = f(x) no puede simularse de forma "fast", es decir, con cola exponencial (teorema 2).
 2. Sea N el número de observaciones necesarias. Por construcción, f puede simularse con E[N] finito. Por tanto (proposición 22 con k=1) el momento de primer orden no puede tener cola uniforme. Es decir, E[N * 1(N>n)] tiende a 0 cuando n tiende a infinito, pero no uniformemente en p (en un conjunto abierto).
-3. Pero por otro lado z es la composición de dos funciones que creo que sí se pueden simular de forma "fast". Según la proposición 14 (ii), la composición de funciones "fast" es "fast". Esto contradice 1: ??
+3. No hay contradicción con la proposición 14 (ii) (la composición de funciones "fast" es "fast"). z es la composición de y = (x-1/2)^2, z = y^(1/2). La primera se puede simular de forma "fast", pero la segunda no, porque para x próxima a 1/2 y está próxima a 0, y ahí z = y^(1/2) no es analítica, por tanto no es "fast".
