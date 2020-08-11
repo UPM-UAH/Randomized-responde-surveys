@@ -77,3 +77,11 @@ Parece bastante exhaustiva: https://github.com/peteroupc/peteroupc.github.io/blo
 
 (También en https://peteroupc.github.io/bernoulli.html)
 
+
+## Dado que |x-1/2| y (x-1/2)^2 no son simulables: ¿enfoque contrario?
+
+Tal vez pueda probarse que hay alguna limitación en la precisión con que puede estimarse |p-1/2| a partir de observaciones de una secuencia con parámetro p. El argumento sería: consideremos un estimador de |p-1/2| a partir de observaciones de una secuencia con parámetro p. Ese estimador quizá pueda considerarse una fábrica de Bernoulli que transforma p en |p-1/2|, la cual sabemos que es imposible. Sería análogo, pero al revés, a Mendo (2019), donde se considera la fábrica como un estimador y eso impone limitaciones sobre la fábrica.
+
+Obtener un estimador de f(p) a partir de una fábrica de f(p) es inmediato: la salida de la fábrica es un estimador (secuencial, insesgado) de f(p). Obtener una fábrica de f(p) a partir de un estimador de f(p) (en ambos casos usando una secuencia X de parámetro p como entrada) no está tan claro. Una posibilidad es, si el estimador es consistente (converge en probabilidad al valor correcto f(p) cuando el número de observaciones de X tiende a infinito), obtener una estimación muy buena de |p-1/2|, digamos r, y sintetizar sin más uan variable de Bernoulli con parámetro r.
+
+Más fácil: estimamos f(p). Supongamos que el estimador es una VA R continua (tiene fdp), entre 0 y 1, y que es insesgado (E[R] = f(p)). [Si esto funciona, después puede prescindirse de la suposición de que R tenga densidad, usando el formalismo de teoría de la medida e integrales de Lebesgue]. Conocido el valor que toma R, generamos una VA B de Bernoulli con parámetro R. B condicionada a R es una VA de Bernoulli de parámetro R. Es fácil ver [comprobar] que B, no condicionada, es Bernoulli con parámetro E[R], que es igual a f(p) por ser el estimador insesgado. Ya tenemos la fábrica a partir de un estimador insesgado.
