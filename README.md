@@ -69,7 +69,7 @@ Consideremos la transformación y = (x-1/2)^2, seguida de z = y^(1/2). La transf
 
 ## Lista de algoritmos de fábricas de Bernoulli
 
-Parece bastante exhaustiva:
+Parece bastante exhaustiva: https://github.com/peteroupc/peteroupc.github.io/blob/master/bernoulli.md
 
-https://peteroupc.github.io/bernoulli.html
+(También en https://peteroupc.github.io/bernoulli.html)
 
