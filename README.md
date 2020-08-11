@@ -66,6 +66,8 @@ Consideremos la transformación y = (x-1/2)^2, seguida de z = y^(1/2). La transf
 
 2. Sea N el número de observaciones necesarias. Por construcción, f puede simularse con E[N] finito. Por tanto (proposición 22 con k=1) el momento de primer orden no puede tener cola uniforme. Es decir, E[N * 1(N>n)] tiende a 0 cuando n tiende a infinito, pero no uniformemente en p (en un conjunto abierto).
 
+Por otro lado, según Keane-O'Brian (1994) (véase tambiéb Nacu-Peres, pág. 1), no es posible simular |x-1/2|, o (x-1/2)^2, porque esas funciones no cumplen la condición "cota polinímica" del teorema de Keane-O'Brian, o bien (1) de Nacu-Peres. Así que debe haber un fallo en el apartado anterior: no es posible simular y = (x-1/2)^2: ??
+
 
 ## Lista de algoritmos de fábricas de Bernoulli
 
