@@ -31,7 +31,7 @@ IBS: permite estimar una probabilidad garantizando una calidad *relativa* (RMSE,
 No parece que haya artículos o resultados conocidos para garantizar una calidad relativa para P a partir de observaciones de Q.
 
 
-## IBS modificado con número de entradas cuadrático
+## IBS modificado con número de entradas cuadrático. NO FUNCIONA; HABÍA UN FALLO, YA IDENTIFICADO
 
 Una forma de garantizar una calidad relativa para P = a+b·Q a partir de observaciones de una secuencia X de variables i.i.d. de Bernoulli con parámetro Q es la siguiente.
 
@@ -44,7 +44,7 @@ Esa transformación se hace de la siguiente manera, usando variables aleatorias 
  - (Q-1/2)^2 se puede expresar como (1-4·Q·(1-Q))/4 = (1-4·sqrt(Q)^2·sqrt(1-Q)^2)/4.
  - El primer factor, 1/4, se genera sin consumir muestras, simplemente usando una variable auxiliar de Bernoulli con parámetro 1/4. Si esa variable es 0 hemos terminado, y el resultado es 0. Si esa variable es 1 continuamos.
  - La operación 1-(...) es simplemente invertir el valor (intercambiar cero y uno).
- - El término 4·sqrt(Q)^2·sqrt(1-Q)^2 es 2/3 · 6·sqrt(Q)^2·sqrt(1-Q)^2, y 6·sqrt(Q)^2·sqrt(1-Q)^2 es la proabilidad de que en 4 realizaciones de sqrt(Q) haya 2 ceros y 2 unos (hay 6 posibles casos: 0011, 0101, 0110, 1001, 1010, 1100).
+ - El término 4·sqrt(Q)^2·sqrt(1-Q)^2 es 2/3 · 6·sqrt(Q)^2·sqrt(1-Q)^2, y 6·sqrt(Q)^2·sqrt(1-Q)^2 es la probabilidad de que en 4 realizaciones de sqrt(Q) haya 2 ceros y 2 unos (hay 6 posibles casos: 0011, 0101, 0110, 1001, 1010, 1100). **ESTO ESTÁ MAL: es 1-sqrt(Q), no sqrt(1-Q). ESTE ERA EL FALLO**
  - Generar 2/3 es, de nuevo, inmediato
  - Generar 6·sqrt(Q)^2·sqrt(1-Q)^2 requiere 4 muestras (como mucho) de sqrt(Q).
  - sqrt(Q) se genera a partir de muestras de X, con un consumo medio de 1/sqrt(Q) muestras de entrada para cada salida (Mendo, 2019).
@@ -56,7 +56,7 @@ Después aplicamos IBS a la secuencia Y, que tiene parámetro P^2/4. Ello permit
 Parece excesivo. ¿Se puede hacer consumiendo del orden de 1/P muestras, en vez e 1/P^2? (Haciendo la pregunta directa, sin RRS, sí sería del orden de 1/P).
 
 
-## Propiedades de |x-1/2|
+### Propiedades de |x-1/2|. NO ES UNA FUNCIÓN SIMULABLE; HABÍA UN FALLO EN LO ANTERIOR
 
 Consideremos la transformación y = (x-1/2)^2, seguida de z = y^(1/2). La transformación compuesta es z = f(x) = |x-1/2|. Esta función es C0 pero no C1. Por tanto, según Nacu-Peres (tabla 1, teorema 2, proposición 22 con k=1):
 
@@ -66,7 +66,9 @@ Consideremos la transformación y = (x-1/2)^2, seguida de z = y^(1/2). La transf
 
 2. Sea N el número de observaciones necesarias. Por construcción, f puede simularse con E[N] finito. Por tanto (proposición 22 con k=1) el momento de primer orden no puede tener cola uniforme. Es decir, E[N * 1(N>n)] tiende a 0 cuando n tiende a infinito, pero no uniformemente en p (en un conjunto abierto).
 
-Por otro lado, según Keane-O'Brian (1994) (véase tambiéb Nacu-Peres, pág. 1), no es posible simular |x-1/2|, o (x-1/2)^2, porque esas funciones no cumplen la condición "cota polinímica" del teorema de Keane-O'Brian, o bien (1) de Nacu-Peres. Así que debe haber un fallo en el apartado anterior: no es posible simular y = (x-1/2)^2: ??
+Por otro lado, según Keane-O'Brian (1994) (véase también Nacu-Peres, pág. 1), no es posible simular |x-1/2|, o (x-1/2)^2, porque esas funciones no cumplen la condición de cota polinómica (teorema de Keane-O'Brian, o bien (1) de Nacu-Peres). Así que debe haber un fallo en lo anterior: no es posible simular y = (x-1/2)^2: ?
+
+Ya está identificado el fallo: el término que aparecía como sqrt(1-Q) es realmente 1-sqrt(Q), y ahí se estropea todo
 
 
 ## Lista de algoritmos de fábricas de Bernoulli
