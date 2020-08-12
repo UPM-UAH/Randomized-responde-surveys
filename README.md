@@ -91,4 +91,4 @@ Otra forma de obtener una fábrica de Bernoulli a partir de un estimador R inses
 
 # Equivalencia entre fábricas de Bernoulli y estimadores insesgados
 
-Ya que hay una equivalencia entre fábricas de Bernoulli y estimadores insesgados entre 0 y 1, quizá puedan utilizarse los resultados sobre estimadores insesgados de DeGroot (1959) (https://projecteuclid.org/euclid.aoms/1177706361) Girshick et al. (1946) (https://projecteuclid.org/euclid.aoms/1177731018) para deducir limitaciones sobre las fábricas de Bernoulli.
+Ya que hay una equivalencia entre fábricas de Bernoulli y estimadores insesgados entre 0 y 1, quizá puedan utilizarse los resultados "clásicos" sobre estimadores insesgados de DeGroot (1959) (https://projecteuclid.org/euclid.aoms/1177706361) y de Girshick et al. (1946) (https://projecteuclid.org/euclid.aoms/1177731018) para deducir limitaciones sobre las fábricas de Bernoulli.
