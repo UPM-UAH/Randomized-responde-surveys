@@ -95,5 +95,5 @@ Esto es parecido a Latuszynski (2010; "Simulating Events of Unknown Probabilties
 
 Ya que hay una equivalencia entre fábricas de Bernoulli y estimadores insesgados entre 0 y 1, quizá se puedan
 
- - Utilizar las limitaciones de estimadores insesgados para deducir limitaciones sobre fábricas de Bernoulli. Se me ocurren: cota de Wolfowitz, o Cramér-Rao sequencial (como en Mendo, 2019 pero en general); resultados de  DeGroot (1959) (https://projecteuclid.org/euclid.aoms/1177706361) y de Girshick et al. (1946) (https://projecteuclid.org/euclid.aoms/1177731018). Este enfoque es similar al de Mendo (2019), donde se considera la fábrica de Bernoulli como un estimador
+ - Utilizar las limitaciones de estimadores insesgados de f(p) para deducir limitaciones sobre fábricas de Bernoulli. Se me ocurren: cota de Wolfowitz (Cramér-Rao sequencial); resultados de  DeGroot (1959) (https://projecteuclid.org/euclid.aoms/1177706361) (los resultados de Girshick et al. (1946) son para p, no para f(p): (https://projecteuclid.org/euclid.aoms/1177731018). Este enfoque es similar al de Mendo (2019), donde se considera la fábrica de Bernoulli como un estimador
  - Utilizar las limitaciones conocidas de una fábrica de Bernoulli para deducir limitaciones del estimador insesgado equivalente. Creo que Yuval-Peres tiene un buen resumen
