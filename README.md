@@ -93,5 +93,5 @@ Otra forma de obtener una fábrica de Bernoulli a partir de un estimador R inses
 
 Ya que hay una equivalencia entre fábricas de Bernoulli y estimadores insesgados entre 0 y 1, quizá se puedan
 
- - Utilizar los resultados "clásicos" sobre estimadores insesgados de DeGroot (1959) (https://projecteuclid.org/euclid.aoms/1177706361) y de Girshick et al. (1946) (https://projecteuclid.org/euclid.aoms/1177731018) para deducir limitaciones sobre las fábricas de Bernoulli. Este enfoque es similar al de Mendo (2019), donde se considera la fábrica de Bernoulli como un estimador
- - Utilizar las limitaciones conocidas (Yuval-Peres) de una fábrica de Bernoulli para deducir limitaciones del estimador insesgado equivalente.
+ - Utilizar las limitaciones de estimadores insesgados para deducir limitaciones sobre fábricas de Bernoulli. Se me ocurren: cota de Wolfowitz, o Cramér-Rao sequencial (como en Mendo, 2019 pero en general); resultados de  DeGroot (1959) (https://projecteuclid.org/euclid.aoms/1177706361) y de Girshick et al. (1946) (https://projecteuclid.org/euclid.aoms/1177731018). Este enfoque es similar al de Mendo (2019), donde se considera la fábrica de Bernoulli como un estimador
+ - Utilizar las limitaciones conocidas de una fábrica de Bernoulli para deducir limitaciones del estimador insesgado equivalente. Creo que Yuval-Peres tiene un buen resumen
