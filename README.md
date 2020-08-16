@@ -97,3 +97,21 @@ Ya que hay una equivalencia entre fábricas de Bernoulli y estimadores insesgado
 
  - Utilizar las limitaciones de estimadores insesgados de f(p) para deducir limitaciones sobre fábricas de Bernoulli. Se me ocurren: cota de Wolfowitz (Cramér-Rao sequencial); resultados de  DeGroot (1959) (https://projecteuclid.org/euclid.aoms/1177706361) (los resultados de Girshick et al. (1946) son para p, no para f(p): (https://projecteuclid.org/euclid.aoms/1177731018). Este enfoque es similar al de Mendo (2019), donde se considera la fábrica de Bernoulli como un estimador
  - Utilizar las limitaciones conocidas de una fábrica de Bernoulli para deducir limitaciones del estimador insesgado equivalente. Creo que Yuval-Peres tiene un buen resumen
+
+
+## DeGroot / Wästlund
+
+De acuerdo DeGroot, pág. 87:: 
+
+ 1. Con tamaño fijo n se pueden estimar de forma insesgada polinomios de grado hasta n
+ 2. Con muestreo binomial inverso: esperar a tener c unos, para c>=2, se puede estimar de forma insesgada cualquier función h(q) (q=1-p) con desarrollo de Taylor en torno a q=0 en |q|<1: h(q) = p^c \sum_{k=0}^\infty b_k q^k. El estimador es: (4.5): $\hat h = b_k / {k+c-1 \choose c-1}$, con k = n-c, siendo n el número de observaciones que han sido necesarias: k es el número de ceros que han salido.
+
+2. Esto se puede convertir en fábrica si el estimador \hat h está entre 0 y 1, es decir, si los b_k están entre 0 y {k+c-1 \choose c-1}. Para c=2 (a menor c mayor varianza del estimador, pero no nos importa, salvo que el estimador pueda salirse de [0,1]): \hat h = b_k/(k+1): la condición es que b_k esté entre 0 y k+1. El número medio de observaciones necesarias es c/p = 2/p.
+ En Mendo (2019) se consideran funciones f(p) = 1-\sum_{k=1}^\infty c_k q^k, o equivalentemente (vía 1-(·)) \sum_{k=1}^\infty c_k q^k, c_k >=0, sum_k c_k=1 (esto último equivale a que la función tiende a 1 cuando p tiende a 0). Se pueden simular con f(p)/p observaciones en media.
+ Es decir, Mendo (2019) parece ¿más general? y usa menos muestras en media. Por tanto esta vía no parece interesante
+
+1. Con tamaño fijo n, según DeGroot: se puede estimar de forma insesgada cualquier polinomio de grado <=n, porque se puede estimar p^k, k=1, ..., n. Supongo que habría que hacer a mano la combinación lineal que define el polinomio en función de los términos p^k. Con eso obtienes un estimador del polinomio, y de ahí se puede obtener una fábrica si el estimador está entre 0 y 1. El problema es que, aunque los estimadores de p^k estén en [0,1], su combinación lineal (estimador del polinomio) en general no. Por tanto no vale.
+
+Wästlund (1999) (http://www.math.chalmers.se/~wastlund/coinFlip.pdf), apartado 4: un polinomio es simulable (fábrica de Bernoulli) de forma finita si y sólo si es un coin-flipping polynomial. El número de observaciones necesarias puede ser mayor que el grado del polinomio, y se llama coin-flipping degree. Ej.: 3x(1-x) requiere 3 observaciones, no 2. Equivalentemente (teorema 4.5), el polinomio debe tener coeficientes enteros y debe ser 0, ó 1, o bien la imagen del intervalo (0,1) debe estar en (0,1).
+
+ Un problema abierto (que parece difícil) es calcular o acotar el coin-flipping degree de un coin-flipping polynomial en función de su grado 
