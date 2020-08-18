@@ -95,7 +95,7 @@ Esto es parecido a Latuszynski (2010; "Simulating Events of Unknown Probabilties
 
 Ya que hay una equivalencia entre fábricas de Bernoulli y estimadores insesgados entre 0 y 1, quizá se puedan
 
- - Utilizar las limitaciones de estimadores insesgados de f(p) para deducir limitaciones sobre fábricas de Bernoulli. Se me ocurren: cota de Wolfowitz (1947) (https://projecteuclid.org/euclid.aoms/1177730439) (Cramér-Rao secuencial); resultados de  DeGroot (1959) (https://projecteuclid.org/euclid.aoms/1177706361) (los resultados de Girshick et al. (1946) son para p, no para f(p): (https://projecteuclid.org/euclid.aoms/1177731018). Este enfoque es similar al de Mendo (2019), donde se considera la fábrica de Bernoulli como un estimador
+ - Utilizar las limitaciones de estimadores insesgados de f(p) para deducir limitaciones sobre fábricas de Bernoulli. Se me ocurren: cota de Wolfowitz (1947) (https://projecteuclid.org/euclid.aoms/1177730439) (Cramér-Rao secuencial); resultados de  DeGroot (1959) (https://projecteuclid.org/euclid.aoms/1177706361) (los resultados de Girshick et al. (1946) son para p, no para f(p): (https://projecteuclid.org/euclid.aoms/1177731018). Este enfoque es similar al de Mendo (2019) (https://arxiv.org/pdf/1612.08923.pdf), donde se considera la fábrica de Bernoulli como un estimador.
  - Utilizar las limitaciones conocidas de una fábrica de Bernoulli para deducir limitaciones del estimador insesgado equivalente. Creo que Nacu-Peres tiene un buen resumen
 
 
@@ -122,4 +122,4 @@ Wästlund (1999) (http://www.math.chalmers.se/~wastlund/coinFlip.pdf), apartado 
  Para poder aplicarla deben cumplirse unas  condiciones de regularidad (Wolfowitz, 1947), un poco pesadas. Para funciones diferenciables y fábricas rápidas en el sentido de Nacu-Peres se cumplen esas condiciones, y se tiene la cota del teorema 3 de Mendo (2019). No sé si se puede avanzar mucho más. Algunas vías serían:
  
  - Intentar relajar las condiciones suficientes: función diferenciable con fábrica rápida (realmente, si hay una fábrica rápida la función debe ser analítica; Nacu-Peres).
- - Un resultado que se utiliza en Mend (2019) es que fábrica rápida implica E[N] finito y función continua de p en (0,1). A lo mejor E[N] es función continua de p en un caso más general.
+ - Un resultado intermedio que se utiliza para desmotrar eso es que fábrica rápida implica que E[N] es finita y es una función continua de p en (0,1) (Mendo, 2019, teorema 3). A lo mejor E[N] es función continua de p en un caso más general.
