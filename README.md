@@ -95,7 +95,7 @@ Esto es parecido a Latuszynski (2010; "Simulating Events of Unknown Probabilties
 
 Ya que hay una equivalencia entre fábricas de Bernoulli y estimadores insesgados entre 0 y 1, quizá se puedan
 
- - Utilizar las limitaciones de estimadores insesgados de f(p) para deducir limitaciones sobre fábricas de Bernoulli. Se me ocurren: cota de Wolfowitz (Cramér-Rao sequencial); resultados de  DeGroot (1959) (https://projecteuclid.org/euclid.aoms/1177706361) (los resultados de Girshick et al. (1946) son para p, no para f(p): (https://projecteuclid.org/euclid.aoms/1177731018). Este enfoque es similar al de Mendo (2019), donde se considera la fábrica de Bernoulli como un estimador
+ - Utilizar las limitaciones de estimadores insesgados de f(p) para deducir limitaciones sobre fábricas de Bernoulli. Se me ocurren: cota de Wolfowitz (Cramér-Rao secuencial); resultados de  DeGroot (1959) (https://projecteuclid.org/euclid.aoms/1177706361) (los resultados de Girshick et al. (1946) son para p, no para f(p): (https://projecteuclid.org/euclid.aoms/1177731018). Este enfoque es similar al de Mendo (2019), donde se considera la fábrica de Bernoulli como un estimador
  - Utilizar las limitaciones conocidas de una fábrica de Bernoulli para deducir limitaciones del estimador insesgado equivalente. Creo que Yuval-Peres tiene un buen resumen
 
 
@@ -114,4 +114,12 @@ Respecto a 1: Con tamaño fijo n, según DeGroot: se puede estimar de forma inse
 
 Wästlund (1999) (http://www.math.chalmers.se/~wastlund/coinFlip.pdf), apartado 4: un polinomio es simulable (fábrica de Bernoulli) de forma finita si y sólo si es un coin-flipping polynomial. El número de observaciones necesarias puede ser mayor que el grado del polinomio, y se llama coin-flipping degree. Ej.: 3x(1-x) requiere 3 observaciones, no 2. Equivalentemente (teorema 4.5), el polinomio debe tener coeficientes enteros y debe ser 0, ó 1, o bien la imagen del intervalo (0,1) debe estar en (0,1).
 
- Un problema abierto (que parece difícil) es calcular o acotar el coin-flipping degree de un coin-flipping polynomial en función de su grado 
+ Un problema abierto (que parece difícil) es calcular o acotar el coin-flipping degree de un coin-flipping polynomial en función de su grado
+ 
+ 
+ ## Cota de Wolfowitz (Cramér-Rao sequencial)
+ 
+ Para poder aplicarla deben cumplirse unas  condiciones de regularidad (Wolfowitz, 1947), un poco pesadas. Para funciones diferenciables y fábricas rápidas en el sentido de Nacu-Peres se cumplen esas condiciones, y se tiene la cota del teorema 3 de Mendo (2019). No sé si se puede avanzar mucho más. Algunas vías serían:
+ 
+ - Intentar relajar las condiciones suficientes: función diferenciable con fábrica rápida (realmente, si hay una fábrica rápida la función debe ser analítica; Nacu-Peres).
+ - Un resultado que se utiliza en Mend (2019) es que fábrica rápida implica E[N] finito y función continua de p en (0,1). A lo mejor E[N] es función continua de p en un caso más general.
