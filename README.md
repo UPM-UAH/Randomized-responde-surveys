@@ -135,4 +135,4 @@ Tal vez puede hacerse algo parecido para funciones de varias variables, f(p_1, .
 
 Quizá en este caso haya que usar el enfoque original de Wästlund: tratar los coeficientes y los términos p_1^{k_1} p_2^{k_2} \cdots p_m^{k_m} por separado, porque no está claro cómo ordenar de forma "lógica" los coeficientes en el caso m-dimensional. Pero creo que eso no afecta al número de entradas necesarias de los m procesos (habría que aplicar "corto-circuito": parar en cuanto una de las variables p_i salga 0.
 
-Un ejemplo interesante puede ser f(p,q) = p^q (sumas o productos de p, q, ... son triviales).
+Un ejemplo interesante podría ser f(p,q) = p^q (sumas o productos de p, q, ... son triviales). Pero las derivadas respecto a q no son todas positivas
