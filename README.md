@@ -133,6 +133,6 @@ Dada una función f(p) que tiene desarrollo de Taylor en torno a p=1 (o bien p=0
 
 Tal vez puede hacerse algo parecido para funciones de varias variables, f(p_1, ..., p_m), que tengan coeficientes de Taylor positivos. Podrían llamarse fábricas "vectoriales" (por analogía por el análisis "vectorial": cuando la función es de varias variables) Como en el caso de una sola variable, los coeficientes tienen que sumar 1 o menos, para que la función no exceda el valor 1 en el dominio (0,1)^m.
 
-Quizá en este caso haya que usar el enfoque original de Wästlund: tratar los coeficientes y los términos p_1^{k_1} p_2^{k_2} \cdots p_m^{k_m} por separado, porque no está claro cómo ordenar de forma "lógica" los coeficientes en el caso m-dimensional.
+Quizá en este caso haya que usar el enfoque original de Wästlund: tratar los coeficientes y los términos p_1^{k_1} p_2^{k_2} \cdots p_m^{k_m} por separado, porque no está claro cómo ordenar de forma "lógica" los coeficientes en el caso m-dimensional. Pero creo que eso no afecta al número de entradas necesarias de los m procesos (habría que aplicar "corto-circuito": parar en cuanto una de las variables p_i salga 0.
 
-Un ejemplo interesante puede ser f(p,q) = p^q (sumas o productos de p, q, ... son triviales)
+Un ejemplo interesante puede ser f(p,q) = p^q (sumas o productos de p, q, ... son triviales).
