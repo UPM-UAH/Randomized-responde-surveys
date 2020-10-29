@@ -117,7 +117,7 @@ Wästlund (1999) (http://www.math.chalmers.se/~wastlund/coinFlip.pdf), apartado 
  Un problema abierto (que parece difícil) es calcular o acotar el coin-flipping degree de un coin-flipping polynomial en función de su grado
  
  
- ## Cota de Wolfowitz (Cramér-Rao sequencial)
+ ## Cota de Wolfowitz (Cramér-Rao secuencial)
  
  Para poder aplicarla hay que comprobar que se cumplen unas condiciones de regularidad (Wolfowitz, 1947), un poco pesadas. Para funciones diferenciables y fábricas rápidas en el sentido de Nacu-Peres se cumplen esas condiciones, y se tiene la cota del teorema 3 de Mendo (2019). No sé si se puede avanzar mucho más. Algunas vías serían:
  
