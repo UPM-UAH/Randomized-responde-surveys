@@ -138,3 +138,5 @@ Quizá en este caso haya que usar el enfoque original de Wästlund: tratar los c
 Un ejemplo interesante podría ser f(p,q) = p^q (sumas o productos de p, q, ... son triviales). Pero las derivadas respecto a q no son todas positivas
 
 Acabo de ver (29x20) que a alguien más le parece interesante este problema: https://stats.stackexchange.com/q/494302/28285
+
+En una respuesta a esa pregunta (https://stats.stackexchange.com/a/494539/28285) se menciona este artículo (de Febrero de 2022) sobre fábricas vectoriales: https://arxiv.org/pdf/2202.07216.pdf 
